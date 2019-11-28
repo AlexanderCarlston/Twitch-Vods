@@ -4,7 +4,7 @@ import { DiscoveryPageComponent } from './pages/discovery-page/discovery-page.co
 
 const routes: Routes = [
   {
-    path: '', redirectTo: '/discovery', pathMatch: 'full'
+    path: '', redirectTo: '/discover', pathMatch: 'full'
   }, 
   {
     path: '**',
