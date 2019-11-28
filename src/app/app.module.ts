@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppNavComponent } from './components/app-nav/app-nav.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { DiscoveryPageComponent } from './pages/discovery-page/discovery-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavComponent,
-    LandingPageComponent
+    DiscoveryPageComponent,
   ],
   imports: [
     BrowserModule,
