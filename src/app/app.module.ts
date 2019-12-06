@@ -10,6 +10,7 @@ import { DiscoveryPageComponent } from './pages/discovery-page/discovery-page.co
 import { VideoCardComponent } from './components/video-card/video-card.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxsModule } from '@ngxs/store';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ClarityModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxsModule.forRoot([
+
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
