@@ -9,6 +9,7 @@ import { AppNavComponent } from './components/app-nav/app-nav.component';
 import { DiscoveryPageComponent } from './pages/discovery-page/discovery-page.component';
 import { VideoCardComponent } from './components/video-card/video-card.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GameCardComponent } from './components/game-card/game-card.component';
     BrowserModule,
     AppRoutingModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
