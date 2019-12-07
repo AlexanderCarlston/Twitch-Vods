@@ -11,6 +11,7 @@ import { VideoCardComponent } from './components/video-card/video-card.component
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,10 @@ import { NgxsModule } from '@ngxs/store';
     BrowserAnimationsModule,
     HttpClientModule,
     NgxsModule.forRoot([
-
-    ])
+      
+    ], {
+      developmentMode: !environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

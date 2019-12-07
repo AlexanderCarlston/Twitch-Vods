@@ -13,11 +13,12 @@ export interface twitchResult {
   providers: [ApiService]
 })
 export class DiscoveryPageComponent implements OnInit {
-  topGames: Observable<twitchResult>;
+  topGames: object[];
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getTopGames().subscribe(res => console.log(res))
+    this.apiService.getTopGames()
+    .subscribe(data => this.topGames = data.data)
   }
 
 }

@@ -15,11 +15,6 @@ export class ApiService {
   ) { }
 
   getTopGames(): Observable<twitchResult>{
-    return this.http.get<twitchResult>('http://localhost:8080/games')
-    .pipe(
-      map((response: twitchResult) => response),
-      share(),
-      tap(res => console.log(res))
-    )
+    return this.http.get<twitchResult>('http://localhost:8080/games');
   }
 }
