@@ -3,7 +3,7 @@
     <div class="clr-row">
       <ng-container *ngFor="let game of topGames">
         <div class="clr-col-lg-2 clr-col-md-4 clr-col-12">
-          <game-card></game-card>
+          <game-card [game]="game"></game-card>
         </div>
       </ng-container>
     </div>

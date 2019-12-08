@@ -12,6 +12,7 @@ import { GameCardComponent } from './components/game-card/game-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
+import { VideosPageComponent } from './pages/videos-page/videos-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { environment } from 'src/environments/environment';
     DiscoveryPageComponent,
     VideoCardComponent,
     GameCardComponent,
+    VideosPageComponent,
   ],
   imports: [
     BrowserModule,

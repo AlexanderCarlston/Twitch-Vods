@@ -9,7 +9,10 @@ const routes: Routes = [
   {
     path: '**',
     component: DiscoveryPageComponent
-  }
+  }, 
+  // {
+
+  // }
 ];
 
 @NgModule({
