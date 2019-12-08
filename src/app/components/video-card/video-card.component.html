@@ -1,6 +1,8 @@
 <a href="..." class="card clickable">
   <div class="card-img">
-    <img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_thealtf4stream-440x248.jpg" alt="Missing Image" />
+    <img
+    [src]="validImgSrc(video.thumbnail_url)"
+      alt="Missing Image" />
   </div>
 </a>
 <h3 class="ellipsis-overflow">test test test test test test test test test</h3>
