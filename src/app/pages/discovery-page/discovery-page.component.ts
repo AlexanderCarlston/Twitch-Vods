@@ -10,7 +10,6 @@ export interface twitchResult {
   selector: 'app-discovery-page',
   templateUrl: './discovery-page.component.html',
   styleUrls: ['./discovery-page.component.scss'],
-  providers: [ApiService]
 })
 export class DiscoveryPageComponent implements OnInit {
   topGames: object[];

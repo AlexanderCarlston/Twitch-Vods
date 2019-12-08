@@ -17,4 +17,8 @@ export class ApiService {
   getTopGames(): Observable<twitchResult>{
     return this.http.get<twitchResult>('http://localhost:8080/games');
   }
+
+  getVideosForGame(gameId: string): Observable<twitchResult> {
+    return this.http.get<twitchResult>(`http://localhost:8080/games/${gameId}`);
+  }
 }

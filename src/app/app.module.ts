@@ -14,6 +14,7 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { VideosPageComponent } from './pages/videos-page/videos-page.component';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
     }),
     NgxsRouterPluginModule.forRoot()
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
