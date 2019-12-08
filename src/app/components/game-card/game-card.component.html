@@ -1,4 +1,4 @@
-<a href="..." class="card clickable">
+<a [routerLink]="['/videos', game.id]" (click)="navigateToVideos(game.id)" class="card clickable">
   <div class="card-img">
     <img
       [src]="validImgSrc(game.box_art_url)"

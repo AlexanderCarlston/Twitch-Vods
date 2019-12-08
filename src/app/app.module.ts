@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { VideosPageComponent } from './pages/videos-page/videos-page.component';
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { VideosPageComponent } from './pages/videos-page/videos-page.component';
       
     ], {
       developmentMode: !environment.production
-    })
+    }),
+    NgxsRouterPluginModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
