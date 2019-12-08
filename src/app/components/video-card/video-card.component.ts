@@ -14,7 +14,6 @@ export class VideoCardComponent implements OnInit {
   }
 
   validImgSrc(src: string) {
-    console.log(src.replace('{width}', '180').replace('{height}', '250'))
     return src.replace('%{width}', '440').replace('%{height}', '248');
   }
 }
