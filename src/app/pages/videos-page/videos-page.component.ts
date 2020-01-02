@@ -14,7 +14,9 @@ export class VideosPageComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.apiService.getVideosForGame(id)
-    .subscribe(data => this.videos = data.data)
+    .subscribe(data => {
+      this.videos = data.data;
+    })
   }
 
 }

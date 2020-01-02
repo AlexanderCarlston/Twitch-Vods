@@ -16,7 +16,7 @@ export class ApiService {
   ) { }
 
   getTopGames(): Observable<twitchResult>{
-    return this.http.get<twitchResult>(this.baseUrl + 'games/top', {headers: this.clientHeader});
+    return this.http.get<twitchResult>(this.baseUrl + 'games/top?limit=13', {headers: this.clientHeader});
   }
 
   getVideosForGame(gameId: string): Observable<twitchResult> {

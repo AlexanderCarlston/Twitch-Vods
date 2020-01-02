@@ -17,7 +17,10 @@ export class DiscoveryPageComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getTopGames()
-    .subscribe(data => this.topGames = data.data)
+    .subscribe(data => {
+      data.data.pop();
+      this.topGames = data.data
+    })
   }
 
 }
