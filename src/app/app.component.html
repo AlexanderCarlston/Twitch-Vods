@@ -4,8 +4,9 @@
   <div class="content-container">
     <nav class="sidenav">
       <section class="sidenav-content nav-container">
+        <p>Reccomended Channels:</p>
         <ng-container *ngFor="let user of tenUsers">
-          <user-side-nav [user]="user"></user-side-nav>
+          <user-side-nav class="users-side" [user]="user"></user-side-nav>
         </ng-container>
       </section>
     </nav>
