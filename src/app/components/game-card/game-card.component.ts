@@ -13,7 +13,7 @@ export class GameCardComponent implements OnInit {
   constructor(private router: Router, private store: Store) { }
 
   ngOnInit() {
-    console.log(this.game);
+
   }
 
   validImgSrc(src: string) {

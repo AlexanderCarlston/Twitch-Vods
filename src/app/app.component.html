@@ -3,10 +3,12 @@
 
   <div class="content-container">
     <nav class="sidenav">
-      <section class="sidenav-content">
-
+      <section class="sidenav-content nav-container">
+        <ng-container *ngFor="let user of tenUsers">
+          <user-side-nav [user]="user"></user-side-nav>
+        </ng-container>
       </section>
-  </nav>
+    </nav>
     <router-outlet></router-outlet>
   </div>
 </div>

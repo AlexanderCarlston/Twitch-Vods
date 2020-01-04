@@ -20,7 +20,7 @@ export class DiscoveryPageComponent implements OnInit {
     .subscribe(data => {
       data.data.pop();
       this.topGames = data.data
-    })
+    });
   }
 
 }
