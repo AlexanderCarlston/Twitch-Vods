@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
-import { share, take, map, tap } from 'rxjs/operators';
 
-export interface twitchResult<T> {
+export interface TwitchResult<T> {
   data: Array<T>;
 }
 
@@ -14,34 +13,34 @@ export interface User {
 }
 
 export interface Stream {
-
+  id: string;
 }
 
 export interface Game {
-
+  name: string;
 }
 
 @Injectable()
 export class ApiService {
-  baseUrl = 'https://api.twitch.tv/helix/'
-  clientHeader = {'Client-ID': 'yne9spn35mh0j47wtp05g367bpu9pe'}
+  baseUrl = 'https://api.twitch.tv/helix/';
+  clientHeader = { 'Client-ID': 'yne9spn35mh0j47wtp05g367bpu9pe' };
   constructor(
     private http: HttpClient
   ) { }
 
-  getTopGames(): Observable<twitchResult<Game>>{
-    return this.http.get<twitchResult<Game>>(this.baseUrl + 'games/top?limit=13', { headers: this.clientHeader });
+  getTopGames(): Observable<TwitchResult<Game>> {
+    return this.http.get<TwitchResult<Game>>(this.baseUrl + 'games/top?limit=13', { headers: this.clientHeader });
   }
 
-  getVideosForGame(gameId: string): Observable<twitchResult<Game>> {
-    return this.http.get<twitchResult<Game>>(this.baseUrl + `videos?game_id=${gameId}`, { headers: this.clientHeader });
+  getVideosForGame(gameId: string): Observable<TwitchResult<Game>> {
+    return this.http.get<TwitchResult<Game>>(this.baseUrl + `videos?game_id=${gameId}`, { headers: this.clientHeader });
   }
 
   getStreams() {
-    return this.http.get<twitchResult<Stream>>(this.baseUrl + 'streams?first=10', { headers: this.clientHeader })
+    return this.http.get<TwitchResult<Stream>>(this.baseUrl + 'streams?first=10', { headers: this.clientHeader });
   }
-  
+
   getUser(userId: string) {
-    return this.http.get<twitchResult<User>>(this.baseUrl + `users?id=${userId}`, { headers: this.clientHeader })
+    return this.http.get<TwitchResult<User>>(this.baseUrl + `users?id=${userId}`, { headers: this.clientHeader });
   }
 }
