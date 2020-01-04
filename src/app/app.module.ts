@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { VideosPageComponent } from './pages/videos-page/videos-page.component';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { ApiService } from './services/api.service';
+import { UserSideNavComponent } from './components/user-side-nav/user-side-nav.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ApiService } from './services/api.service';
     VideoCardComponent,
     GameCardComponent,
     VideosPageComponent,
+    UserSideNavComponent,
   ],
   imports: [
     BrowserModule,
