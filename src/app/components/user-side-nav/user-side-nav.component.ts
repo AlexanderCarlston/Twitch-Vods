@@ -8,12 +8,15 @@ import { ApiService, User } from 'src/app/services/api.service';
 })
 export class UserSideNavComponent implements OnInit {
   @Input() user: User;
-  imgUrl: string;
+  userData: object;
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getUser(this.user.user_id)
-    .subscribe(value => this.imgUrl = value.data[0].profile_image_url)
+    .subscribe(value => {
+      this.userData = value.data[0];
+      console.log(this.userData)
+    });
   }
 
 }
